@@ -1,6 +1,4 @@
-#ERC PROJECT
-import sys                                     
-sys.path.append('/Users/hardaatsinghbaath/Desktop/StudySession/lib/python3.10/site-packages/')
+#ball_beam
 import gym
 import ballbeam_gym
 import matplotlib.pyplot as plt
@@ -31,8 +29,7 @@ Vel=np.arange(100)
 time=np.arange(100)
 
 
-#for i in range(3):
-#env.reset()
+#running the simulations
 for t in range(100):
         env.render()
         pos=env.bb.x
@@ -48,10 +45,7 @@ for t in range(100):
         if done:
            env.reset()
          
-        #if(env.bb.x==0 and env.bb.v==0):
-        #    env.reset()
-        #(Ki*(I*0.05))+
-
+        
 plt.subplot(2,1,1)
 plt.plot(time,Pos)
 plt.title('Position')
