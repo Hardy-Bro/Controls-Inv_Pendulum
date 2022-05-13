@@ -10,8 +10,6 @@ a=time.time()
 env_name="CartPole-v1"
 env=gym.make(env_name)
 
-#print(env.observation_space )
-
 
 class Agent():
     def __init__(self,env):
@@ -24,6 +22,7 @@ class Agent():
         f=-var
         g=var
         
+        #All the required actions and their required conditions
         if (theta >0 and omega >f):
             action=1
         elif (theta>0 and omega <f):
@@ -40,8 +39,8 @@ state=env.reset()
 stateprev=0
 
 
+#Running the simulation
 for _ in range (500):
-    #action=env.action_space.sample()
     
     action=agent.get_action(state,stateprev)
     stateprev=state[2]
@@ -51,5 +50,6 @@ for _ in range (500):
    
     
 b=time.time()
-print(b-a,"1")
+#to measure the time duration for which the program runs
+print(b-a)
 
