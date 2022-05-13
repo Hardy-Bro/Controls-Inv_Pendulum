@@ -1,6 +1,5 @@
-#cartpole 1
-import sys                                     
-sys.path.append('/Users/hardaatsinghbaath/Desktop/StudySession/lib/python3.10/site-packages/')
+#cartpole 
+
 import gym
 import matplotlib.pyplot as plt 
 import numpy as np
